@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Title 3 - Vallejo Public Library</title>
+</head>
+<body>
+    <header>
+        <h1>Vallejo Public Library</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="catalog.html">Catalog</a></li>
+                <li><a href="library_card.html">Get a Library Card</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Book Title 3</h2>
+            <p><strong>Author:</strong> Author Name</p>
+            <p><strong>Genre:</strong> Genre</p>
+            <p><strong>Summary:</strong> Brief summary of the book.</p>
+            <p><strong>Copies Available:</strong> 1 out of 3</p>
+            <form action="/reserve_book" method="post">
+                <input type="hidden" name="book_id" value="3">
+                <label for="library_card_number">Library Card Number:</label>
+                <input type="text" id="library_card_number" name="library_card_number" required><br>
+                <button type="submit">Reserve this Book</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Vallejo Public Library</p>
+    </footer>
+</body>
+</html>
