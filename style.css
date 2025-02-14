@@ -5,12 +5,17 @@
     box-sizing: border-box;
 }
 
+html, body {
+    height: 100%;
+}
+
 body {
     font-family: 'Open Sans', sans-serif;
     line-height: 1.6;
     background-color: #F5F5DC;
     color: #333333;
-    padding: 10px;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
@@ -46,15 +51,18 @@ nav a:hover {
 main {
     background-color: white;
     padding: 20px;
-    margin: 10px auto;
+    margin: 0 auto;
     border-radius: 8px;
-    max-width: 800px;
+    width: 90%;
+    max-width: 1000px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex-grow: 1;
 }
 
 h1, h2 {
     color: #003366;
     font-family: 'Merriweather', serif;
+    text-align: center;
 }
 
 form input, form button {
@@ -78,11 +86,26 @@ button:hover {
 
 footer {
     text-align: center;
-    margin-top: 20px;
     padding: 10px 0;
     background-color: #006633;
     color: white;
+    margin-top: auto;
 }
+
+/* Center book links in catalog */
+.catalog-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    list-style: none;
+}
+
+.catalog-list li {
+    margin: 10px 0;
+}
+
 
 /* Responsive Design */
 @media (max-width: 600px) {
@@ -102,13 +125,15 @@ footer {
 
 @media (min-width: 601px) and (max-width: 1024px) {
     main {
-        max-width: 600px;
+        width: 95%;
+        max-width: 800px;
     }
 }
 
 @media (min-width: 1025px) {
     main {
-        max-width: 800px;
+        width: 90%;
+        max-width: 1000px;
     }
 }
 
