@@ -92,20 +92,35 @@ footer {
     margin-top: auto;
 }
 
-/* Center book links in catalog */
+/* Grid layout for book catalog */
 .catalog-list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
     list-style: none;
+    padding: 0;
+    justify-items: center;
+    text-align: center;
 }
 
 .catalog-list li {
-    margin: 10px 0;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 200px;
 }
 
+.catalog-list a {
+    text-decoration: none;
+    color: #003366;
+    font-weight: bold;
+}
+
+.catalog-list a:hover {
+    text-decoration: underline;
+}
 
 /* Responsive Design */
 @media (max-width: 600px) {
